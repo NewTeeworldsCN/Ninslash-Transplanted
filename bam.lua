@@ -94,6 +94,10 @@ function ContentCompile(action, output)
 	AddDependency(output, Path("datasrc/network.py"))
 	AddDependency(output, Path("datasrc/compile.py"))
 	AddDependency(output, Path("datasrc/datatypes.py"))
+	AddDependency(output, Path("datasrc/cross/content.py"))
+	AddDependency(output, Path("datasrc/cross/network.py"))
+	AddDependency(output, Path("datasrc/cross/compile.py"))
+	AddDependency(output, Path("datasrc/cross/datatypes.py"))
 	return output
 end
 

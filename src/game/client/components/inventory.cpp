@@ -721,6 +721,36 @@ void CInventory::DrawInventory(vec2 Pos, vec2 Size)
 				
 				if (x+y*4 == Selected && CustomStuff()->m_aItem[Selected] > 0 && abs(m_SelectorMouse.x - p.x) < s2 && abs(m_SelectorMouse.y - p.y) < s2)
 				{
+					const char *s_TipText[NUM_SW] = {
+						"Repair tool",
+						"",
+						"",
+						"Grenade",
+						"Electric grenade",
+						"Supply grenade",
+						"",
+						"",
+						"",
+						"",
+						"Weapon upgrade",
+						"Energy shield",
+						"Respawn device",
+						"Mask of regeneration",
+						"Mask of speed",
+						"Mask of protection",
+						"Mask of plenty",
+						"Mask of melee",
+						"Invisibility device",
+						"Electrowall",
+						"Area Shield",
+						"The Cure",
+						"",
+						"",
+						"Zombie claw",
+						"Bomb (for destroying reactors)",
+						""
+					};
+
 					if (IsStaticWeapon(CustomStuff()->m_aItem[Selected]))
 						TextRender()->Text(0, p.x-s2*0.8f, p.y-s2, s2*0.25f, s_TipText[GetStaticType(CustomStuff()->m_aItem[Selected])], -1);
 				}
